@@ -1,0 +1,35 @@
+
+
+  @mixin button-style ($background, $color) {
+    background: $background;
+    color: $color;
+    &:hover {
+      background: grayscale($background);
+      transition: all .4s;
+    }
+  }  
+
+
+.btn {
+  width: 200px;
+  padding: 10px 0;
+  background: none;
+  border: 0;
+  border-radius: 10px;
+  display: block;
+  margin: 10px 0;
+
+  &.btn-laranja {
+    @include button-style($color-laranja, white);
+  }
+  &.btn-roxo {
+    @include button-style($color-roxo, white);
+  }
+  
+  &.btn-amarelo {
+    @include button-style($color-amarelo, black);
+  }
+}
+
+
+
